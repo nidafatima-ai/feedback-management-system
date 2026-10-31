@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sadaa · Student Feedback</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" role="status" aria-live="polite"></div>
+<button id="theme" class="theme-fab" aria-label="Toggle dark mode">🌙</button>
+
+<section id="authView" class="auth">
+  <div class="auth-split">
+    <div class="auth-brand">
+      <div class="mark" aria-hidden="true">✦</div>
+      <span class="eyebrow">STUDENT FEEDBACK SYSTEM</span>
+      <h1>Sadaa</h1>
+      <p class="meaning">Sadaa means “voice”</p>
+      <p class="tag">Every voice builds a better classroom.</p>
+      <ul><li>🔒 Honest feedback, completely anonymous</li><li>📊 Live insights teachers can act on</li><li>⭐ Rate any course in seconds</li></ul>
+      <div class="uni"><img src="logo.png" alt="BUITEMS logo"><span>Balochistan University of Information Technology, Engineering &amp; Management Sciences</span></div>
+    </div>
+    <div class="auth-card">
+      <div id="loginBox" class="stack">
+        <h2>Welcome</h2>
+        <p class="sub">Log in or create your account to continue.</p>
+        <div class="tabs" role="tablist"><button id="tabLogin" class="active">Log in</button><button id="tabReg">Register</button></div>
+        <input id="name" placeholder="Full name" aria-label="Full name" autocomplete="name" class="hidden">
+        <input id="cms" placeholder="CMS ID (e.g. 12345)" aria-label="CMS ID" maxlength="15" autocomplete="off" class="hidden">
+        <input id="email" type="email" placeholder="Email" aria-label="Email" autocomplete="email">
+        <div class="pw"><input id="password" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password"><button type="button" id="pwToggle" aria-label="Show password">👁</button></div>
+        <select id="role" aria-label="I am a" class="hidden"><option value="student">I am a student</option><option value="teacher">I am a teacher</option></select>
+        <a href="#" id="forgotLink" class="link">Forgot password?</a>
+        <p id="err" class="err" role="alert" aria-live="polite"></p>
+        <button id="authBtn" class="btn">Log in</button>
+      </div>
+      <div id="verifyBox" class="stack hidden">
+        <h2>Verify your email</h2>
+        <p class="sub" id="vsub">We sent a 6-digit code to your email.</p>
+        <input id="vCode" placeholder="6-digit code" aria-label="Verification code" inputmode="numeric" maxlength="6">
+        <button id="doVerify" class="btn">Verify</button>
+        <p id="verr" class="err" role="alert" aria-live="polite"></p>
+        <a href="#" id="resend" class="link">Resend code</a>
+        <a href="#" id="vBack" class="link">← Back to log in</a>
+      </div>
+      <div id="forgotBox" class="stack hidden">
+        <h2>Reset password</h2>
+        <p class="sub">Enter your email and we will create a reset code.</p>
+        <input id="fEmail" type="email" placeholder="Email" aria-label="Email">
+        <button id="sendCode" class="btn">Send reset code</button>
+        <div id="step2" class="stack hidden">
+          <input id="fCode" placeholder="6-digit code" aria-label="Reset code" inputmode="numeric" maxlength="6">
+          <input id="fPass" type="password" placeholder="New password (min 6 characters)" aria-label="New password">
+          <button id="doReset" class="btn">Reset password</button>
+        </div>
+        <p id="ferr" class="err" role="alert" aria-live="polite"></p>
+        <a href="#" id="backLogin" class="link">← Back to log in</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="appView" class="hidden">
+  <header class="top">
+    <div class="logo"><div class="mark">✦</div><div><h2>Sadaa</h2><small class="sub-logo">Student Feedback System</small></div></div>
+    <div><span id="who"></span><button id="logout" class="btn ghost">Log out</button></div>
+  </header>
+  <main id="main"></main>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

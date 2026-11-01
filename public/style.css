@@ -123,3 +123,13 @@ html[data-theme=dark] ::placeholder{color:#a08c7c}
 .card,.kpi,.hero{box-shadow:none!important;animation:none!important;break-inside:avoid;border:1px solid #ddd;backdrop-filter:none}.hero{color:#000;background:#fff}}
 
 .pw button{color:var(--mocha);display:grid;place-items:center}.pw button svg{display:block}
+
+/* fixes from tester feedback: dark-mode header contrast + input overflow */
+html[data-theme=dark] .top{background:rgba(27,20,16,.9);border-bottom-color:var(--sand)}
+html[data-theme=dark] .top h2{background:none;-webkit-background-clip:border-box;background-clip:border-box;-webkit-text-fill-color:#f4eadf;color:#f4eadf}
+html[data-theme=dark] .sub-logo{color:#d4b898}
+html[data-theme=dark] .pill{color:#fff}
+textarea{resize:vertical;min-height:96px;max-width:100%}
+input,select,textarea{max-width:100%}
+main>*,.card,.form{min-width:0}
+.item{overflow-wrap:anywhere}

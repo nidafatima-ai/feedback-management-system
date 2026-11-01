@@ -121,3 +121,5 @@ html[data-theme=dark] .err{color:#f0a090}html[data-theme=dark] .err.ok{color:#8f
 html[data-theme=dark] ::placeholder{color:#a08c7c}
 @media print{.top,.theme-fab,.btn,.filters,.actions,#toast,.hero::after{display:none!important}body{background:#fff}body::before,body::after{display:none}
 .card,.kpi,.hero{box-shadow:none!important;animation:none!important;break-inside:avoid;border:1px solid #ddd;backdrop-filter:none}.hero{color:#000;background:#fff}}
+
+.pw button{color:var(--mocha);display:grid;place-items:center}.pw button svg{display:block}

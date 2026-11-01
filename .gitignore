@@ -4,3 +4,4 @@ node_modules/
 migrate-*.sql
 feedback-backup.sql
 preview.html
+.neon
